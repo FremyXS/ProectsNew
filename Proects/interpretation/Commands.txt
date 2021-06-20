@@ -1,0 +1,5 @@
+﻿var a
+var b
+mov a, 10
+mov b, 15
+add a, b
