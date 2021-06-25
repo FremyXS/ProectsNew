@@ -68,7 +68,7 @@ namespace XMLData
         {
             if(Members.Count > 0)
             {
-                if(ContaisPerson(person))
+                if(Members.Any(e => e.Name == person.Name))
                 {
                     AddRoleToMember(person, projectName);
                 }
@@ -81,11 +81,6 @@ namespace XMLData
             {
                 AddMember(person, projectName);
             }
-        }
-        private static bool ContaisPerson(Person person)
-        {
-            var u = Members.Any(e => e.Name == person.Name);
-            return u;
         }
         private static void AddMember(Person person, string projectName)
         {
